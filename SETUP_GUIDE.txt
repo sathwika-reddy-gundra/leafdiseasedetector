@@ -1,0 +1,108 @@
+Here's a step-by-step guide for setting up and running the **Leaf Disease Detector** project after cloning it from GitHub. 
+
+This guide assumes you are using **Windows, macOS, or Linux** and have **Git, Python, Node.js, and npm** installed.  
+
+---
+
+# **Leaf Disease Detector - Setup Guide**  
+### **1️⃣ Prerequisites**  
+Before you start, ensure you have the following installed:  
+✅ **Git** - [Download Git](https://git-scm.com/downloads)  
+✅ **Python (3.8+)** - [Download Python](https://www.python.org/downloads/)  
+✅ **Node.js (18+) and npm** - [Download Node.js](https://nodejs.org/)  
+✅ **pip (Python Package Installer)** - Comes with Python  
+
+---
+
+## **2️⃣ Clone the Repository**  
+1. Open **Terminal** (macOS/Linux) or **Command Prompt/Powershell** (Windows).  
+2. Navigate to the folder where you want to clone the project:  
+   ```bash
+   cd path/to/your/folder
+   ```
+3. Clone the GitHub repository:  
+   ```bash
+   git clone https://github.com/sathwika-reddy-gundra/leafdiseasedetector.git
+   ```
+4. Move into the project folder:  
+   ```bash
+   cd leafdiseasedetector
+   ```
+
+---
+
+## **3️⃣ Set Up the Backend (FastAPI + PyTorch)**  
+1. Move into the backend folder:  
+   ```bash
+   cd backend
+   ```
+2. Create a **virtual environment**:  
+   ```bash
+   python -m venv venv
+   ```
+3. Activate the virtual environment:  
+   - **Windows (Command Prompt)**:  
+     ```bash
+     venv\Scripts\activate
+     ```
+   - **Windows (PowerShell)**:  
+     ```powershell
+     venv\Scripts\Activate.ps1
+     ```
+   - **macOS/Linux**:  
+     ```bash
+     source venv/bin/activate
+     ```
+4. Install required dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+5. Run the backend API:  
+   ```bash
+   uvicorn main:app --reload
+   ```
+   This will start the backend at **http://127.0.0.1:8000**  
+
+---
+
+## **4️⃣ Set Up the Frontend (Next.js + ReactJS)**  
+1. Open a new **terminal** window and move to the frontend folder:  
+   ```bash
+   cd frontend
+   ```
+2. Install frontend dependencies:  
+   ```bash
+   npm install
+   ```
+3. Start the frontend server:  
+   ```bash
+   npm run dev
+   ```
+   The frontend will run on **http://localhost:3000**  
+
+---
+
+## **5️⃣ Testing the Application**  
+1. Open your browser and go to:  
+   **Frontend:** 👉 `http://localhost:3000`  
+   **Backend:** 👉 `http://127.0.0.1:8000/docs` (Swagger API Docs)  
+2. Upload an image in the UI and check if the detection is working.  
+
+---
+
+## **6️⃣ Common Issues and Fixes**  
+✅ **Virtual Environment Not Found?**  
+   Run `source venv/bin/activate` (macOS/Linux) or `venv\Scripts\activate` (Windows).  
+✅ **Port Already in Use?**  
+   Run `kill -9 $(lsof -t -i:8000)` (macOS/Linux) or restart your PC.  
+✅ **NPM Issues?**  
+   Run `npm cache clean --force` and try `npm install` again.  
+
+---
+
+## **7️⃣ Deploying the Project**  
+- **Frontend Deployment:** Vercel (Recommended)  
+- **Backend Deployment:** AWS/GCP  
+- **Database (if required):** Firebase/MongoDB  
+
+---
