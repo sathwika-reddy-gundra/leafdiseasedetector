@@ -47,3 +47,12 @@ leafdiseasedetector/
 ## Deploying  
 
 This project can be deployed easily on **Vercel** (Frontend) and **AWS/GCP** (Backend).  
+
+## Current Working Status
+
+- ✅ Frontend setup completed using Next.js.
+- ✅ Image uploader component integrated.
+- ✅ GitHub repository setup with proper version control.
+- ✅ Requirements.txt added for backend dependencies.
+- 🔄 Backend API development in progress.
+- ⏳ Model integration for Leaf Disease Detection (Upcoming).
