@@ -54,5 +54,5 @@ This project can be deployed easily on **Vercel** (Frontend) and **AWS/GCP** (Ba
 - ✅ Image uploader component integrated.
 - ✅ GitHub repository setup with proper version control.
 - ✅ Requirements.txt added for backend dependencies.
-- 🔄 Backend API development in progress.
-- ⏳ Model integration for Leaf Disease Detection (Upcoming).
+- ✅ Backend API development in progress.
+- ✅ Basic Model integration for Leaf Disease Detection.
