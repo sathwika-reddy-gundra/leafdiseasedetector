@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ```
 leafdiseasedetector/
 │── frontend/       # Next.js frontend
-│── backend/        # FastAPI backend (to be integrated)
+│── backend/        # FastAPI backend 
 │── src/
 │   ├── components/ # Reusable UI components
 │   ├── pages/      # Next.js pages
