@@ -4,6 +4,7 @@ from transformers import ViTForImageClassification, ViTFeatureExtractor
 from PIL import Image
 import torch
 import io
+import numpy as np
 
 app = FastAPI()
 
@@ -30,6 +31,18 @@ async def upload_file(file: UploadFile = File(...)):
     # Read the uploaded image
     image_bytes = await file.read()
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+
+    # Basic green-pixel leaf check
+    arr = np.array(image)
+    green_mask = (arr[:, :, 1] > arr[:, :, 0] * 1.1) & (arr[:, :, 1] > arr[:, :, 2] * 1.1)
+    green_ratio = green_mask.sum() / (arr.shape[0] * arr.shape[1])
+    if green_ratio < 0.05:
+        return {
+            "filename": file.filename,
+            "predicted_label": None,
+            "disease": "Invalid Input - Please upload an image of a leaf",
+            "confidence": "0.00%"
+        }
 
     # Preprocess the image
     inputs = feature_extractor(images=image, return_tensors="pt")
