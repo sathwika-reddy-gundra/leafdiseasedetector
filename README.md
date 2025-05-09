@@ -7,8 +7,6 @@ This is a **Next.js-based web app** for detecting leaf diseases using **machine 
 ### 1️⃣ Install Dependencies  
 ```sh
 npm install
-# or
-yarn install
 ```
 
 ### 2️⃣ Run the Development Server  
